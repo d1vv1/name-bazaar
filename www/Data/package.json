@@ -2,7 +2,7 @@
   "name": "name_bazaar",
   "version": "1.0.0",
   "description": "",
-  "main": "firebase_nb.js",
+  "main": "../Libs/firebase_nb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
