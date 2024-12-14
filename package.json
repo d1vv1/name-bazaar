@@ -1,0 +1,15 @@
+{
+  "name": "name_bazaar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "www/Libs/LiveDB/firebaseLiveDB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@firebase/app": "^0.10.16",
+    "firebase": "^11.0.2",
+    "vite": "^6.0.2"
+  }
+}
