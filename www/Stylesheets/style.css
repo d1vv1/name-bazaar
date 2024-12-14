@@ -1,3 +1,5 @@
+/* Styles for all views */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body {
     background-size: cover;
     background: url('../Assets/Images/gradient.png') no-repeat fixed;
     background-size: cover;
-    /*background-color: darkcyan;*/
+    /*background-color: white;*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -87,6 +89,8 @@ nav a:hover {
     width: 100%;
 }
 
+/*Styles for index.html*/
+
 .heading{
     margin-top: 100px;
     display: flex;
@@ -98,6 +102,7 @@ nav a:hover {
 .container1 {
     margin-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     gap: 10px;
     padding: 20px;
@@ -115,7 +120,6 @@ nav a:hover {
     display: flex;
     border: 1px solid black;
     background: linear-gradient(to bottom right, #E7ACC2, #A2A5E2, #E7ACC2);
-    width: 300px;
     flex-grow: 1;
     padding: 10px;
     border-radius: 10px;
@@ -126,6 +130,7 @@ nav a:hover {
 .container1 p {
     align-self: center;
     font-size: 20px;
+    padding: 10px;
 }
 
 .container1 #text {
@@ -133,40 +138,12 @@ nav a:hover {
 }
 
 .container1 #image {
+    width: 85%;
+    align-self: center;
     background-size: cover;
     background: url('../Assets/Images/nature-7175030_1280.jpg') 50% 73% no-repeat;
 }
 
-.horoscope {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.horoscope a {
-    height: 100%;
-    text-decoration: none;
-    color: black;
-    min-width: 25px;
-    min-height: 25px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 30px;
-    margin: 5px;
-    font-size: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-    flex-shrink: 0;
-    flex-grow: 1;
-    backdrop-filter: blur(5px);
-}
-
-.horoscope a:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-}
 
 .container2 {
     display: flex;
@@ -255,6 +232,7 @@ nav a:hover {
     border-radius: 10px;
 }
 
+/*Styles for info.html*/
 
 .info-container {
     display: flex;
@@ -282,14 +260,23 @@ nav a:hover {
     max-width: 900px;
 }
 
+/*Styles for directContact.html*/
+
+.main-dc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-container {
-    height: 100vh;
+    width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
-    margin-top: 60px;
+    gap: 50px;
+    margin-top: 70px;
+
 }
 
 .contact-container #contact-info {
@@ -302,6 +289,53 @@ nav a:hover {
     border-right: 1px rgba(255, 255, 255, 0.2) solid;
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+
+#contact-info #phone-number ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#bh1 p{
+    font-size: 25px;
+    color: blue;
+}
+
+#bh2 p{
+    font-size: 35px;
+    color: blue;
+    font-weight: bold;
+}
+
+#para3 p{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#bh3 p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#services-list ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Styles for share.html*/
 
 .share-container {
     height: 100vh;
@@ -342,6 +376,7 @@ nav a:hover {
     fill: black;
 }
 
+/*Styles for personInfo.html*/
 
 .form-content {
     margin-top: 60px;

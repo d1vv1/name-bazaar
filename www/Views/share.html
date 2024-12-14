@@ -11,8 +11,7 @@
         <ul class="navbar">
             <li><a href="../../index.html">Name Bazaar</a></li>
             <li class="hideOnMobile"><a href="info.html">Info</a></li>
-            <li class="hideOnMobile"><a href="direct_contact.html">Direct Contact</a></li>
-            <li class="hideOnMobile"><a href="https://forms.gle/wRrz47QAF9YPiiy19" target="_blank">Feedback</a></li>
+            <li class="hideOnMobile"><a href="directContact.html">Direct Contact</a></li>
             <li class="hideOnMobile"><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
             <li class="hideOnMobile"><a href="share.html">Share App</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
@@ -21,7 +20,7 @@
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
             <li><a href="info.html">Info</a></li>
-            <li><a href="direct_contact.html">Direct Contact</a></li>
+            <li><a href="directContact.html">Direct Contact</a></li>
             <li><a href="https://forms.gle/wRrz47QAF9YPiiy19" target="_blank">Feedback</a></li>
             <li><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
             <li><a href="share.html">Share App</a></li>
@@ -36,9 +35,24 @@
 
     </div>
 
-    <script src="../JavaScript/index.js">
+    <div id="share-temp">
 
+    </div>
 
+    <script src="../JavaScript/index.js"></script>
+    <script>
+        const copyButton = document.getElementById('copy-button');
+
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText('https://www.google.com')
+                .then(() => {
+                    alert("URL copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error("Failed to copy: ", err);
+                });
+        });
     </script>
+
 </body>
 </html>
