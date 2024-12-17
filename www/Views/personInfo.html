@@ -9,23 +9,47 @@
 
 <nav>
     <ul class="navbar">
-        <li><a href="../../index.html">Name Bazaar</a></li>
+        <li onclick=showSidebar("l-sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        <li class="hideOnMobile"><a href="../../index.html">Home</a></li>
         <li class="hideOnMobile"><a href="info.html">Info</a></li>
         <li class="hideOnMobile"><a href="directContact.html">Direct Contact</a></li>
         <li class="hideOnMobile"><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
         <li class="hideOnMobile"><a href="share.html">Share App</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        <li class="menu-button" onclick=showSidebar("sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
     </ul>
 
     <ul class="sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li onclick=hideSidebar("sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li><a href="../../index.html">Home</a></li>
         <li><a href="info.html">Info</a></li>
         <li><a href="directContact.html">Direct Contact</a></li>
         <li><a href="https://forms.gle/wRrz47QAF9YPiiy19" target="_blank">Feedback</a></li>
         <li><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
         <li><a href="share.html">Share App</a></li>
     </ul>
+
+    <ul class="l-sidebar">
+        <li onclick=hideSidebar("l-sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li><a href="../Views/directContact.html">Startup's Name</a></li>
+        <li><a href="../Views/directContact.html">Company's Name</a></li>
+        <li><a href="../Views/directContact.html">Domain Name</a></li>
+        <li><a href="../Views/directContact.html">Institutes Name</a></li>
+        <li><a href="../Views/directContact.html">Newborn Baby's Name</a></li>
+        <li><a href="../Views/directContact.html">Unique Name(Boys/Girls)</a></li>
+        <li><a href="../Views/directContact.html">Nick Name(Boys/Girls)</a></li>
+        <li><a href="../Views/directContact.html">Baby's Name using Parents Name</a></li>
+        <li><a href="../Views/directContact.html">Pet's Name</a></li>
+        <li><a href="../Views/directContact.html">Sanskrit Name of anything</a></li>
+        <li><a href="../Views/directContact.html">Sanskrit Slogan for Institute</a></li>
+        <li><a href="../Views/directContact.html">Sanskrit Slogan for Log</a></li>
+        <li><a href="../Views/directContact.html">Sanskrit Mottos for Companies</a></li>
+        <li><a href="../Views/directContact.html">Sanskrit Mottos for Institute</a></li>
+    </ul>
 </nav>
+
+<div class="chat-container">
+    <div class="chat-button"><a href="../Views/personInfo.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></a></div>
+</div>
 
 
 
@@ -41,22 +65,23 @@
               </div>
 
               <div class="lab-text">
-                  <input class="text-box" type="text" id="username" placeholder="Your Name...">
+                  <label for="username"></label><input class="text-box" type="text" id="username" placeholder="Your Name...">
               </div>
 
               <div class="lab-text">
-                   <input class="text-box" type="email" id="useremail" placeholder="Your Email...">
+                  <label for="useremail"></label><input class="text-box" type="email" id="useremail" placeholder="Your Email...">
               </div>
 
               <div class="lab-text">
-                   <textarea class="text-box" id="usermessage" rows="10" placeholder="Your Message..."></textarea>
+                  <label for="usermessage"></label><textarea class="text-box" id="usermessage" rows="10" placeholder="Your Message..."></textarea>
               </div>
 
               <button class="submit-button" type="submit">Submit</button>
           </form>
         </div>
 
-        <script type="module" src="../Libs/LiveDB/firebaseLiveDB.js"></script>
+    <script src="../JavaScript/index.js"></script>
+    <script type="module" src="../Libs/LiveDB/firebaseLiveDB.js"></script>
 <!--        <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>-->
 <!--        <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>-->
 </body>

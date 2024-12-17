@@ -15,7 +15,6 @@ export async function displayOnPage(collectionFb, docFb, fieldPath, htmlId) {
         const content = await fetchField(collectionFb, docFb, fieldPath);
 
         if (content) {
-            // Handle arrays, objects, or primitive types dynamically
             if (Array.isArray(content)) {
                 const makeUL = document.createElement("ul");
                 content.forEach((item) => {
@@ -65,7 +64,6 @@ async function fetchField(collectionName, docName, fieldPath) {
     }
 }
 
-// Helper function to resolve nested paths with spaces
 function getValueFromPath(obj, path, separator = '.') {
     return path.split(separator).reduce(
         (acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined),
