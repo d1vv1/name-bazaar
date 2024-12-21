@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share</title>
     <link rel="stylesheet" href="../Stylesheets/style.css">
 </head>
@@ -23,7 +24,6 @@
         <li><a href="../../index.html">Home</a></li>
         <li><a href="info.html">Info</a></li>
         <li><a href="directContact.html">Direct Contact</a></li>
-        <li><a href="https://forms.gle/wRrz47QAF9YPiiy19" target="_blank">Feedback</a></li>
         <li><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
         <li><a href="share.html">Share App</a></li>
     </ul>
@@ -51,31 +51,82 @@
     <div class="chat-button"><a href="../Views/personInfo.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></a></div>
 </div>
 
+
     <div class="share-container">
-        <div class="share-button">
-            <h1>Copy Button:</h1>
-            <button id="copy-button"><svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg></button>
+        <div class="share-bg">
+            <h1>Share this app:</h1>
+            <svg id="share-button" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T720-200q0-17-11.5-28.5T680-240q-17 0-28.5 11.5T640-200q0 17 11.5 28.5T680-160ZM200-440q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm480-280q17 0 28.5-11.5T720-760q0-17-11.5-28.5T680-800q-17 0-28.5 11.5T640-760q0 17 11.5 28.5T680-720Zm0 520ZM200-480Zm480-280Z"/></svg>
         </div>
-
     </div>
 
-    <div id="share-temp">
 
+<div id="overlay"></div>
+
+<div id="fallback-container">
+    <div id="fallback">
+        <a class="x-button" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" fill-rule="nonzero" d="M323.74 148.35h36.12l-78.91 90.2 92.83 122.73h-72.69l-56.93-74.43-65.15 74.43h-36.14l84.4-96.47-89.05-116.46h74.53l51.46 68.04 59.53-68.04zm-12.68 191.31h20.02l-129.2-170.82H180.4l130.66 170.82z"/></svg></a>
+        <a class="facebook-button" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><path d="M115.613 0h280.774C459.974 0 512 52.026 512 115.612v278.415c0 63.588-52.026 115.613-115.613 115.613H287.015V332.805h69.253l14.365-78.229h-83.618v-27.667c0-41.341 16.218-57.241 58.194-57.241 13.04 0 23.533.317 29.576.953V99.706c-11.448-3.18-39.434-6.361-55.651-6.361-85.545 0-124.977 40.388-124.977 127.522v33.709h-52.79v78.229h52.79V509.64h-78.544C52.026 509.64 0 457.615 0 394.027V115.612C0 52.026 52.026 0 115.613 0z"/></svg></a>
+        <a class="reddit-button" target="_blank"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zm302.5-49.5c0 137-111 248-248 248s-248-111-248-248 111-248 248-248 248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zm-68.9 116.2c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></a>
+        <svg class="copy-button" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
     </div>
+</div>
+
+
+
 
     <script src="../JavaScript/index.js"></script>
     <script>
-        const copyButton = document.getElementById('copy-button');
 
-        copyButton.addEventListener('click', () => {
-            navigator.clipboard.writeText('https://www.google.com')
+        const overlay = document.getElementById('overlay');
+        const fallback = document.getElementById('fallback-container');
+
+        shareButton = document.getElementById('share-button');
+        shareButton.addEventListener("click", async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: "Check out this website!",
+                        url: `${url}`
+                    })
+                    console.log("Shared successfully!");
+                } catch (err) {
+                    console.error("Sharing failed:", err);
+                }
+            } else {
+                overlay.style.display = "flex";
+                fallback.style.display = "flex";
+            }
+        })
+
+        overlay.addEventListener("click", () => {
+            overlay.style.display = "none";
+            fallback.style.display = "none";
+        })
+
+        const url = encodeURI(window.location.href);
+        const msg = encodeURIComponent('Hey! Check out my website');
+        const title = encodeURIComponent("Name Bazaar");
+
+        xButton = document.querySelector('.x-button');
+        xButton.href = `https://twitter.com/share?&url=${url}&text=${msg}&hashtags=`
+
+        fbButton = document.querySelector('.facebook-button');
+        fbButton.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+        redditButton = document.querySelector('.reddit-button');
+        redditButton.href = `https://www.reddit.com/submit?url=${url}&title=${title}`;
+
+        copyButton = document.querySelector('.copy-button');
+        copyButton.addEventListener("click", () => {
+            navigator.clipboard.writeText(`${msg}: ${url}`)
                 .then(() => {
-                    alert("URL copied to clipboard!");
-                })
-                .catch(err => {
-                    console.error("Failed to copy: ", err);
-                });
-        });
+                alert('Copied to clipboard!');
+            }).catch(err => {
+                console.error("Failed to copy", err);
+            })
+        })
+
+
     </script>
 
 </body>

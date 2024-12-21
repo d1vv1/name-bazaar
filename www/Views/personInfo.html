@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Info</title>
     <link rel="stylesheet" href="../Stylesheets/style.css">
 </head>
@@ -23,7 +24,6 @@
         <li><a href="../../index.html">Home</a></li>
         <li><a href="info.html">Info</a></li>
         <li><a href="directContact.html">Direct Contact</a></li>
-        <li><a href="https://forms.gle/wRrz47QAF9YPiiy19" target="_blank">Feedback</a></li>
         <li><a href="https://www.freeprivacypolicy.com/live/57fa6d16-cbb9-45fd-998d-8ae4ba3a392a" target="_blank">Privacy Policy</a></li>
         <li><a href="share.html">Share App</a></li>
     </ul>
@@ -47,42 +47,37 @@
     </ul>
 </nav>
 
-<div class="chat-container">
-    <div class="chat-button"><a href="../Views/personInfo.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></a></div>
-</div>
 
 
 
-        <div class="form-content">
-          <form action="" class="user-info" id="contact-form">
+<div class="form-content">
+    <form action="" class="user-info" id="contact-form">
 
-              <div class="prompt">
-                  <p>Please leave you info here. We will contact you later</p>
-              </div>
-
-              <div class="alert">
-                  Message Sent!
-              </div>
-
-              <div class="lab-text">
-                  <label for="username"></label><input class="text-box" type="text" id="username" placeholder="Your Name...">
-              </div>
-
-              <div class="lab-text">
-                  <label for="useremail"></label><input class="text-box" type="email" id="useremail" placeholder="Your Email...">
-              </div>
-
-              <div class="lab-text">
-                  <label for="usermessage"></label><textarea class="text-box" id="usermessage" rows="10" placeholder="Your Message..."></textarea>
-              </div>
-
-              <button class="submit-button" type="submit">Submit</button>
-          </form>
+        <div class="prompt">
+            <p>Please leave you info here. We will contact you later</p>
         </div>
+
+        <div class="alert">
+            Message Sent!
+        </div>
+
+        <div class="lab-text">
+            <label for="username"></label><input class="text-box" type="text" id="username" placeholder="Your Name...">
+        </div>
+
+        <div class="lab-text">
+            <label for="useremail"></label><input class="text-box" type="email" id="useremail" placeholder="Your Email...">
+        </div>
+
+        <div class="lab-text">
+            <label for="usermessage"></label><textarea class="text-box" id="usermessage" rows="10" placeholder="Your Message..."></textarea>
+        </div>
+
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</div>
 
     <script src="../JavaScript/index.js"></script>
     <script type="module" src="../Libs/LiveDB/firebaseLiveDB.js"></script>
-<!--        <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>-->
-<!--        <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>-->
 </body>
 </html>
