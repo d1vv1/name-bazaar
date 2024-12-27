@@ -1,6 +1,5 @@
-import { app } from "../firebaseConfig.js"
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
-
+import { app } from "../firebaseConfig.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 const contactFormDB = getDatabase(app);
 
@@ -11,26 +10,28 @@ function submitForm(e) {
 
     const name = getElementVal("username");
     const emailid = getElementVal("useremail");
+    const phNum = getElementVal("userph");
     const msgContent = getElementVal("usermessage");
 
-
-    saveMessages(name, emailid, msgContent);
-
-
+    saveMessages(name, emailid, phNum, msgContent);
 }
 
-const saveMessages = (name, emailid, msgContent) => {
+const saveMessages = (name, emailid, phone, msgContent) => {
+    // Use `push()` to generate a unique key for each new user entry
+    const newUserRef = push(ref(contactFormDB, "users"));
 
-    set(ref(contactFormDB, 'user/' + getElementVal("username")), {
+    set(newUserRef, {
         name: name,
         email: emailid,
+        phone: phone,
         message: msgContent,
-    }).then(() => {
-        showSuccess()
-    }).catch((error) => {
-        console.log("Error saving data", error)
-    });
-
+    })
+        .then(() => {
+            showSuccess();
+        })
+        .catch((error) => {
+            console.log("Error saving data", error);
+        });
 };
 
 const getElementVal = (id) => {
@@ -45,4 +46,4 @@ const showSuccess = () => {
     }, 3000);
 
     document.getElementById("contact-form").reset();
-}
+};

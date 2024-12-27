@@ -1,13 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDEOWqRAqiVgVuZNw5-Qyd0emw4hLH6WOg",
-    authDomain: "name-bazaar-34aef.firebaseapp.com",
-    databaseURL: "https://name-bazaar-34aef-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "name-bazaar-34aef",
-    storageBucket: "name-bazaar-34aef.firebasestorage.app",
-    messagingSenderId: "597127145024",
-    appId: "1:597127145024:web:d52929fb19a9dc46fa21a5"
+    apiKey: "AIzaSyCz6_tE99G99-SgFKnurvSlfHLyC-SsH_4",
+    authDomain: "name-bazaar-9f2d0.firebaseapp.com",
+    databaseURL: "https://name-bazaar-9f2d0-default-rtdb.firebaseio.com",
+    projectId: "name-bazaar-9f2d0",
+    storageBucket: "name-bazaar-9f2d0.appspot.com",
+    messagingSenderId: "490671214479",
+    appId: "1:490671214479:web:348254ee2b81e60754c5fa"
 };
 
 export const app = initializeApp(firebaseConfig);

@@ -1,9 +1,11 @@
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+import { getFirestore, doc, getDoc, getDocs, collection } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+import {getDownloadURL, getStorage, ref} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
 import { app } from "./firebaseConfig.js";
 
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export async function displayOnPage(collectionFb, docFb, fieldPath, htmlId) {
+export async function displayTextOnPage(collectionFb, docFb, fieldPath, htmlId) {
     const element = document.getElementById(htmlId);
 
     if (!element) {
@@ -69,4 +71,25 @@ function getValueFromPath(obj, path, separator = '.') {
         (acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined),
         obj
     );
+}
+
+export async function loadRandomImage(htmlId) {
+    try {
+        const querySnapshot = await getDocs(collection(db, "images"));
+        const imagePaths = [];
+        querySnapshot.forEach((doc) => {
+            imagePaths.push(doc.data().path);
+        });
+
+        const randomIndex = Math.floor(Math.random() * imagePaths.length);
+        const randomImagePath = imagePaths[randomIndex];
+
+        const imageRef = ref(storage, randomImagePath);
+        const url = await getDownloadURL(imageRef);
+
+        const imgElement = document.getElementById(htmlId);
+        imgElement.src = url;
+    } catch (error) {
+        console.error("Error loading image:", error);
+    }
 }
