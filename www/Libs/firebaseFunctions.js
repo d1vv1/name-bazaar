@@ -21,6 +21,9 @@ export async function displayTextOnPage(collectionFb, docFb, fieldPath, htmlId) 
                 const makeUL = document.createElement("ul");
                 content.forEach((item) => {
                     const itemElement = document.createElement("li");
+                    if (fieldPath === "PhoneNos") {
+                        makeUL.className = 'sv-phNum';
+                    }
                     itemElement.textContent = item;
                     makeUL.appendChild(itemElement);
                 });

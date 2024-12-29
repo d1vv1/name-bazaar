@@ -8,10 +8,7 @@
 body {
     min-height: 100vh;
     background-size: cover;
-    /*background: url('../Assets/Images/gradient.png') no-repeat fixed;*/
-    /*background-size: cover;*/
     background: #F5EBE0;
-    /*background: linear-gradient(to bottom right, #0b0c10, #181C14);*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -36,6 +33,9 @@ nav .navbar li:first-child {
     margin-right: auto;
 }
 
+nav .navbar li:first-child a svg{
+    padding-right: 10px;
+}
 
 nav li {
     height: 50px;
@@ -101,15 +101,60 @@ nav a:hover {
     width: 100%;
 }
 
+.header {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    height: auto;
+    width: 200px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 825px) {
+    .header {
+        width: 100%;
+        padding-top: 70px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header img {
+        height: auto;
+        width: 150px;
+        margin-right: auto;
+    }
+}
+
 .chat-container{
     position: sticky;
-    top: 70px;
+    top: 90%;
     padding-right: 0;
     z-index: 998;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
+}
+
+.chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-button img {
+    height: auto;
+    width: 300px;
 }
 
 .chat-button a{
@@ -139,14 +184,13 @@ nav a:hover {
         display: none;
     }
     .chat-container {
-        top: 80px;
+        top: 90%;
         right: 0;
         position: fixed;
         overflow: hidden;
         padding-right: 10px;
     }
     .chat-button svg {
-        border: 3px solid black;
         width: 25px;
         border-radius: 10px;
     }
@@ -157,25 +201,6 @@ nav a:hover {
 
 
 /*Styles for index.html*/
-
-.heading{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.heading h1 {
-    font-size: 3.1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.heading img {
-    height: 150px;
-}
-
 
 .container1 {
     padding-top: 100px;
@@ -240,7 +265,7 @@ nav a:hover {
     border: 2px solid black;
     align-self: center;
     height: auto;
-    width: 46%;
+    width: 80%;
 }
 
 .container3 {
@@ -276,12 +301,6 @@ nav a:hover {
 }
 
 @media (max-width: 825px) {
-    .heading h1 {
-        font-size: 2.5rem;
-    }
-    .heading {
-        flex-direction: column;
-    }
     .container1 {
         margin-top: 25px;
     }
@@ -292,7 +311,7 @@ nav a:hover {
         flex-direction: column;
     }
     .img-container .item {
-        width: 60%;
+        width: 90%;
     }
     .container2 {
         margin-top: 25px;
@@ -302,7 +321,7 @@ nav a:hover {
     .container2 .item {
         border-radius: 30px;
         padding: 10px 10px;
-        width: 80%;
+        width: 90%;
     }
     .container3 {
         padding: 50px 25px;
@@ -329,6 +348,7 @@ nav a:hover {
     gap: 100px;
     height: 100%;
     width: 100%;
+    padding-top: 50px;
 }
 
 .info-container h1 {
@@ -408,6 +428,19 @@ nav a:hover {
     gap: 30px;
 }
 
+#mail-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#mail-address svg {
+    fill: black;
+    height: auto;
+    width: 50px;
+}
+
 #bh1 p{
     font-size: 1.5rem;
     color: #556b2f;
@@ -479,7 +512,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    top: 100px;
+    top: 150px;
     position: fixed;
     overflow: hidden;
 }
@@ -504,7 +537,7 @@ nav a:hover {
 @media(max-width: 825px) {
     .share-bg {
         width: 80%;
-        height: 70%;
+        height: 50%;
     }
     .share-container {
         top: 150px;
@@ -584,7 +617,6 @@ nav a:hover {
 }
 
 .form-content {
-    padding-top: 60px;
     padding-bottom: 10px;
     width: 100vw;
     display: flex;
@@ -674,6 +706,7 @@ nav a:hover {
     gap: 100px;
     height: 100%;
     width: 100%;
+    padding-top: 50px;
 }
 
 .sv-info-container h1 {
@@ -701,6 +734,10 @@ nav a:hover {
 
 .sv-info-text p {
     padding-top: 15px;
+}
+
+.sv-info-text .sv-phNum {
+    font-weight: bold;
 }
 
 @media (max-width: 825px) {
