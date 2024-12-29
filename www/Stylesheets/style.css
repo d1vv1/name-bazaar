@@ -109,21 +109,26 @@ nav a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-align: center;
 }
 
+.chat-button a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: #F5EBE0;
+    width: 150px;
+}
 
 .chat-button svg {
     fill: black;
-    padding: 10px;
-    border-radius: 10px 0 0 10px;
-    border-left: 3px;
-    border-top: 3px;
-    border-bottom: 3px;
-    border-right: 0;
-    border-style: solid;
-    border-color: black;
-    width: 20px;
-    background-color: #F5EBE0;
+    padding: 5px 10px;
+
 }
 
 @media (max-width: 825px) {
@@ -156,7 +161,6 @@ nav a:hover {
 .heading{
     margin-top: 100px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -168,73 +172,55 @@ nav a:hover {
     text-align: center;
 }
 
-.title-img {
-    background: url("../Assets/Images/rb_17336.png");
-    background-size: cover;
-    width: 80%;
-    align-self: center;
-    border: 3px solid black;
-    border-radius: 15px;
+.heading img {
+    height: 150px;
 }
 
+
 .container1 {
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    padding: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .container1 .item {
     display: flex;
     border: 3px solid black;
-    flex-grow: 1;
     padding: 10px;
-    border-radius: 10px;
-    min-height: 200px;
-    height: auto;
+    border-radius: 50px;
     background-color: #D5BDAF;
+    width: 90%;
 }
 
+
 .container1 p {
-    align-self: center;
     font-size: 1.25rem;
     padding: 10px;
 }
 
-.container1 #text {
-    text-align: center;
-}
 
-#images {
+.img-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 400px;
-    border: 3px solid black;;
-}
-
-.container1 .image {
     width: 100%;
-    height: 100%;
+}
+
+
+.img-container .item {
+    border-radius: 50px;
+    padding: 10px 10px;
+    background-color: #D5BDAF;
+    border: 3px solid black;
     align-self: center;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.item #im1 {
-    /*background: url("../Assets/Images/nature-7175030_1280.jpg");*/
-    background-size: cover;
-}
-
-.item #im2 {
-    /*background: url("../Assets/Images/pexels-souvenirpixels-1519088.jpg");*/
-    background-size: cover;
+    height: auto;
+    width: 46%;
 }
 
 .container2 {
@@ -248,24 +234,14 @@ nav a:hover {
 }
 
 .container2 .item {
-    display: flex;
     border-radius: 50px;
-    padding: 20px 20px;
+    padding: 10px 10px;
     background-color: #D5BDAF;
     border: 2px solid black;
-    min-height: 200px;
     align-self: center;
-    width: 90%;
+    height: auto;
+    width: 46%;
 }
-
-
-
-.container2 .item p {
-    text-align: center;
-    align-self: center;
-    font-size: 1.25rem;
-}
-
 
 .container3 {
     padding: 100px 50px;
@@ -303,14 +279,20 @@ nav a:hover {
     .heading h1 {
         font-size: 2.5rem;
     }
+    .heading {
+        flex-direction: column;
+    }
     .container1 {
         margin-top: 25px;
     }
     .container1 p {
         font-size: 1rem;
     }
-    #images {
+    .img-container {
         flex-direction: column;
+    }
+    .img-container .item {
+        width: 60%;
     }
     .container2 {
         margin-top: 25px;
@@ -321,9 +303,6 @@ nav a:hover {
         border-radius: 30px;
         padding: 10px 10px;
         width: 80%;
-    }
-    .container2 .item p {
-        font-size: 1rem;
     }
     .container3 {
         padding: 50px 25px;
@@ -636,7 +615,7 @@ nav a:hover {
 
 .alert {
     display: none;
-    background-color: #664e4c;
+    background-color: #D5BDAF;
     width: 100%;
     text-align: center;
     border-radius: 10px;
@@ -653,7 +632,7 @@ nav a:hover {
     width: 250px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #6F5E5C;
+    background-color: #D5BDAF;
     padding: 10px;
     font-size: 17px;
     flex-grow: 1;
@@ -676,7 +655,7 @@ nav a:hover {
     width: 100%;
     border: 3px solid black;
     border-radius: 20px;
-    background-color: #6F5E5C ;
+    background-color: #6F5E5C;
     font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

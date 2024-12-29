@@ -21,5 +21,6 @@ for (let i = 1; i < 15; i++) {
         displayTextOnPage("data", "services", map[`sv${i}`], `sv${i}-file`)
             .then(() => console.log(`sv${i} data found`));
         displayTextOnPage("data", "services", "commonContact", `sv${i}-file`)
+        displayTextOnPage("data", "Direct Contact", "PhoneNos", `sv${i}-file`)
     }
 }

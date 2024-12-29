@@ -93,3 +93,17 @@ export async function loadRandomImage(htmlId) {
         console.error("Error loading image:", error);
     }
 }
+
+export async function loadImage(collectionFb, docFb, fieldPath, htmlId) {
+    try {
+        const imgPath = await fetchField(collectionFb, docFb, fieldPath);
+        const imageRef = ref(storage, imgPath);
+        const url = await getDownloadURL(imageRef);
+
+        const imgElement = document.getElementById(htmlId);
+        imgElement.src = url;
+    } catch (error) {
+        console.error("Error loading image:", error);
+    }
+}
+
