@@ -215,6 +215,9 @@ nav a:hover {
 
 .container1 .item {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 3px solid black;
     padding: 10px;
     border-radius: 50px;
@@ -229,7 +232,6 @@ nav a:hover {
 }
 
 .container1 ul {
-    text-align: center;
     list-style: none;
 }
 

@@ -9,7 +9,7 @@
   "private": true,
   "dependencies": {
     "@firebase/app": "^0.10.16",
-    "firebase": "^11.0.2",
+    "firebase": "^11.1.0",
     "vite": "^6.0.2"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "/WebStormProjects/name_bazaar",
+    "cleanUrls": true,
+    "redirects": [
+      {
+        "source": "/www/Views/:file.html",
+        "destination": "/:file",
+        "type": 301
+      },
+      {
+        "source": "/www/Views/serviceViews/:file.html",
+        "destination": "/:file",
+        "type": 301
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
