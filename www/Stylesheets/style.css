@@ -228,11 +228,8 @@ nav a:hover {
 
 .container1 p {
     font-size: 1.25rem;
-    padding: 10px;
-}
-
-.container1 ul {
-    list-style: none;
+    padding: 20px;
+    text-align: center;
 }
 
 
