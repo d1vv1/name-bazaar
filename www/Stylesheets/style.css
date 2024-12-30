@@ -219,13 +219,18 @@ nav a:hover {
     padding: 10px;
     border-radius: 50px;
     background-color: #D5BDAF;
-    width: 90%;
+    width: 95%;
 }
 
 
 .container1 p {
     font-size: 1.25rem;
     padding: 10px;
+}
+
+.container1 ul {
+    text-align: center;
+    list-style: none;
 }
 
 
