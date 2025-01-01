@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Info</title>
     <link rel="stylesheet" href="../Stylesheets/style.css">
-    <link rel="icon" href="../Assets/Images/mobileLogo.png">
+    <link rel="icon" href="../Assets/Images/icons/mobileLogo.png">
+    <link rel="manifest" href="../../manifest.json">
 </head>
 <body>
 
 <nav>
     <ul class="navbar">
         <li onclick=showSidebar("l-sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg><p>Browse Categories</p></a></li>
-        <li class="hideOnMobile"><a href="../../index.html">Home</a></li>
-        <li class="hideOnMobile"><a href="info.html">Info</a></li>
-        <li class="hideOnMobile"><a href="directContact.html">Direct Contact</a></li>
-        <li class="hideOnMobile"><a href="share.html">Share</a></li>
+        <li class="hideOnMobile"><a href="#" onclick="window.location.href='../../index.html'; return false;">Home</a></li>
+        <li class="hideOnMobile"><a href="#" onclick="window.location.href='info.html'; return false;">Info</a></li>
+        <li class="hideOnMobile"><a href="#" onclick="window.location.href='directContact.html'; return false;">Direct Contact</a></li>
+        <li class="hideOnMobile"><a href="#" onclick="window.location.href='share.html'; return false;">Share</a></li>
         <li class="menu-button" onclick=showSidebar("sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
     </ul>
 
     <ul class="sidebar">
         <li onclick=hideSidebar("sidebar")><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="info.html">Info</a></li>
-        <li><a href="directContact.html">Direct Contact</a></li>
-        <li><a href="share.html">Share</a></li>
+        <li><a href="#" onclick="window.location.href='../../index.html'; return false;">Home</a></li>
+        <li><a href="#" onclick="window.location.href='info.html'; return false;">Info</a></li>
+        <li><a href="#" onclick="window.location.href='directContact.html'; return false;">Direct Contact</a></li>
+        <li><a href="#" onclick="window.location.href='share.html'; return false;">Share</a></li>
     </ul>
 
     <ul class="l-sidebar">

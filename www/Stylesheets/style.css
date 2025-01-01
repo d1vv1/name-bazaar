@@ -106,11 +106,17 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 150px;
+}
+
+#sp-ch {
+    gap: 100px;
 }
 
 .header img {
     height: auto;
-    width: 200px;
+    width: 300px;
+    margin-right: auto;
 }
 
 .header h1 {
@@ -132,6 +138,9 @@ nav a:hover {
         height: auto;
         width: 150px;
         margin-right: auto;
+    }
+    #sp-ch {
+        gap: 0;
     }
 }
 
@@ -202,8 +211,46 @@ nav a:hover {
 
 /*Styles for index.html*/
 
+.loader-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F5EBE0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.loader p {
+    color: #6F5E5C;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-top-color: #6F5E5C;
+    animation: spin 1s infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .container1 {
-    padding-top: 100px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,11 +274,15 @@ nav a:hover {
 
 
 .container1 p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding: 20px;
     text-align: center;
 }
 
+#box-head p {
+    font-size: 2rem;
+    color: #556b2f;
+}
 
 .img-container {
     display: flex;
@@ -284,9 +335,9 @@ nav a:hover {
 .container3 .item {
     min-width: 25px;
     min-height: 25px;
-    border-radius: 5px;
+    border-radius: 30px;
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     font-size: 1.5rem;
     font-weight: bold;
     transition: 0.1s;
@@ -308,8 +359,14 @@ nav a:hover {
     .container1 {
         margin-top: 25px;
     }
+    .container1 .item {
+        padding: 0;
+    }
     .container1 p {
         font-size: 1rem;
+    }
+    #box-head p {
+        font-size: 1.5rem;
     }
     .img-container {
         flex-direction: column;
@@ -341,6 +398,12 @@ nav a:hover {
 
 }
 
+footer {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*Styles for info.html*/
 
@@ -348,44 +411,37 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 100px;
+    justify-content: center;
     height: 100%;
     width: 100%;
     padding-top: 50px;
 }
 
-.info-container h1 {
-    text-align: center;
-}
-
 .info-container #info-text {
-    text-align: center;
-    font-size: 1.25rem;
     padding: 20px;
     border-radius: 20px;
     background-color: #D5BDAF;
     border: 3px solid black;
     width: 70%;
-}
-
-#info-text p ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    list-style: none;
+}
+
+#info-e, #info-h, #alert-txt {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#serve-head {
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 @media (max-width: 825px) {
-    .info-container {
-        margin: 70px 0;
-        gap: 50px;
-    }
-    .info-container #info-text {
-        font-size: 1.1rem;
-    }
+
 }
 
 /*Styles for directContact.html*/
@@ -425,11 +481,24 @@ nav a:hover {
 }
 
 
-#contact-info #phone-number ul{
+#contact-info #phone-number {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+.phCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#phone-number svg {
+    height: auto;
+    width: 40px;
 }
 
 #mail-address {
@@ -479,9 +548,18 @@ nav a:hover {
     .main-dc {
         padding-top: 50px;
     }
-    #contact-info #phone-number ul {
+    #contact-info #phone-number {
         flex-direction: column;
-        gap: 0;
+        gap: 10px;
+    }
+    #phone-number svg {
+        height: auto;
+        width: 25px;
+    }
+    #mail-address svg {
+        fill: black;
+        height: auto;
+        width: 25px;
     }
     .contact-container {
         width: 100%;
@@ -510,13 +588,12 @@ nav a:hover {
 /*Styles for share.html*/
 
 .share-container {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    top: 150px;
     position: fixed;
     overflow: hidden;
 }
@@ -529,8 +606,8 @@ nav a:hover {
     gap: 50px;
     border: 3px solid black;
     background-color: #D5BDAF;
-    height: 80%;
-    width: 50%;
+    height: 60%;
+    width: 40%;
     border-radius: 25px;
 }
 
@@ -544,7 +621,7 @@ nav a:hover {
         height: 50%;
     }
     .share-container {
-        top: 150px;
+        padding-top: 0;
     }
 }
 
