@@ -47,7 +47,7 @@ export async function displayTextOnPage(collectionFb, docFb, fieldPath, htmlId) 
     }
 }
 
-async function fetchField(collectionName, docName, fieldPath) {
+export async function fetchField(collectionName, docName, fieldPath) {
     const docRef = doc(db, collectionName, docName);
 
     try {
