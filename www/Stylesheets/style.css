@@ -113,6 +113,22 @@ nav a:hover {
     gap: 100px;
 }
 
+#ser1 h1, #ser2 h1, #ser4 h1 {
+    padding-right: 100px;
+}
+
+#ser8 {
+    gap: 100px;
+}
+
+#ser9 h1, #ser3 h1 {
+    padding-right: 150px;
+}
+
+#ser12, #ser13{
+    width: 75%;
+}
+
 .header img {
     height: auto;
     width: 300px;
